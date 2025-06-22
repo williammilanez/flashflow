@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="favicon/svg" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>FlashFlow</title>
+  </head>
+
+  <body>
+    <header>
+      <h1 id="title">FlashFlow</h1>
+    </header>
+
+    <main>
+      <p id="card-counter">Card 1 de 5</p>
+
+      <div id="card-container" class="cards-grid flashcard">
+        <div class="flashcard-inner" id="flashcard-inner">
+          <div class="card-front" id="card-front">O que é React?</div>
+
+          <div class="card-back" id="card-back">
+            React é uma biblioteca JavaScript...
+          </div>
+        </div>
+      </div>
+
+      <p id="text">Clique no card para ver a resposta</p>
+    </main>
+
+    <footer>
+      <button id="next-button" disabled>Próximo Card</button>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
