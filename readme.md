@@ -2,7 +2,7 @@
 
 ![Capa do Projeto](./assets/capa-projeto.png)
 
-Flashflow é um projeto de **flashcards interativos** desenvolvido com **HTML, CSS e JavaScript puro**, como parte da pós-graduação _Start Dev_ da Rocketseat.
+Flashflow é um projeto de **flashcards interativos** desenvolvido com **HTML, CSS e JavaScript**, como parte da pós-graduação _Dev Start_ da Rocketseat.
 
 O objetivo é proporcionar uma ferramenta de estudo por repetição ativa, onde o usuário interage com perguntas e respostas de forma dinâmica. Essa abordagem auxilia na memorização de conteúdos como conceitos técnicos, definições e fórmulas, fixando o aprendizado na memória de longo prazo.
 
@@ -35,11 +35,11 @@ const flashcards = [
 
 - ✅ Exibe perguntas e respostas em formato de flashcard.
 - 🔄 Clique no card para alternar entre pergunta e resposta.
+- 🎯 Layout responsivo com animação suave de virada (flip).
 - 👉 Botão **"Próximo Card"** para avançar no baralho.
+- 📊 Contador de progresso (ex.: "Card 2 de 5").
 - 📢 Mensagem ao finalizar todos os cards.
 - 🔁 Botão **"Recomeçar"** para reiniciar os cards embaralhados.
-- 📊 Contador de progresso (ex.: "Card 3 de 5").
-- 🎯 Layout responsivo com animação suave de virada (flip).
 
 ---
 
@@ -53,7 +53,7 @@ const flashcards = [
 
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript (Vanilla - Sem frameworks ou bibliotecas externas)
 
 ---
 
@@ -63,7 +63,7 @@ const flashcards = [
 flashflow/
 │
 ├── assets/
-│   ├── favicon.ico
+│   ├── favicon.svg
 │   ├── capa-projeto.png
 │   └── projeto.png
 │
@@ -89,20 +89,20 @@ flashflow/
 
 Este desafio foi criado para reforçar conceitos essenciais de desenvolvimento web:
 
+- Estruturação de layouts com HTML e CSS.
+- UX simples e eficaz.
 - Manipulação do DOM com JavaScript.
 - Tratamento de eventos e estados.
-- Estruturação de layouts com HTML e CSS.
 - Lógica de programação
 - Boas práticas de estruturação de projetos web
-- UX simples e eficaz.
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Rocketseat**  
-Adaptado e implementado por **William Milanez**  
-📍 Pós-graduação Start Dev – Desafio Fase 1 – _Flashflow_
+Desenvolvido por **Rocketseat**
+Adaptado e implementado por **William Milanez**
+📍 Pós-graduação Dev Start – Desafio Fase 1 – _FlashFlow_
 
 ---
 
