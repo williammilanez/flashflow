@@ -41,6 +41,11 @@ body {
   margin: 0 auto;
 }
 
+body.dark {
+  background: var(--gray-300);
+  color: var(--white);
+}
+
 header,
 main,
 footer {
@@ -171,6 +176,11 @@ main {
   transform: rotateY(180deg);
 }
 
+#card-front,
+#card-back {
+  transition: opacity 0.3s ease-in-out;
+}
+
 #text {
   align-self: stretch;
 
@@ -226,6 +236,63 @@ main {
   cursor: not-allowed;
 }
 
+#toggle-dark-mode {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: var(--purple-200);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-family: var(--Inter);
+  font-size: 1.2rem;
+  transition: background 0.3s ease-in-out;
+}
+
+.mode-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mode-toggle button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.mode-toggle button:hover {
+  transform: scale(1.1);
+}
+
+.mode-toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+body.dark #card-counter,
+body.dark #text,
+body.dark .card-front,
+body.dark .card-back {
+  color: var(--white);
+}
+
+body.dark #card-front {
+  color: var(--gray-300);
+}
+
+body.dark #card-back {
+  color: var(--gray-200);
+}
+
+/* Responsividade */
 @media (max-width: 1024px) {
   body {
     max-width: 100%;

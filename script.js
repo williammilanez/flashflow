@@ -38,6 +38,8 @@ const flashcardInner = document.getElementById("flashcard-inner");
 const nextBtn = document.getElementById("next-button");
 const counterText = document.getElementById("card-counter");
 const instructionText = document.getElementById("text");
+const darkModeBtn = document.getElementById("dark-mode-button");
+const lightModeBtn = document.getElementById("light-mode-button");
 
 // Embaralhar os cards e iniciar
 function initializeDeck() {
@@ -74,6 +76,14 @@ flashcard.addEventListener("click", () => {
   nextBtn.disabled = !isShowingAnswer;
 });
 
+// Permitir alternar o card entre frente e verso utilizando as teclas "Enter" ou "Espaço"
+flashcard.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    flashcard.click();
+  }
+});
+
 // Ir para o próximo card / restart
 nextBtn.addEventListener("click", () => {
   if (hasFinishedDeck) {
@@ -95,4 +105,24 @@ nextBtn.addEventListener("click", () => {
   renderCard();
 });
 
+// Permitir ir para o próximo card utilizando as teclas "Enter" ou "Espaço"
+nextBtn.addEventListener("keydown", (e) => {
+  if ((e.key === "Enter" || e.key === " ") && !nextBtn.disabled) {
+    e.preventDefault();
+    nextBtn.click();
+  }
+});
+
 initializeDeck();
+
+darkModeBtn.addEventListener("click", () => {
+  document.body.classList.add("dark");
+  darkModeBtn.style.display = "none";
+  lightModeBtn.style.display = "inline-block";
+});
+
+lightModeBtn.addEventListener("click", () => {
+  document.body.classList.remove("dark");
+  darkModeBtn.style.display = "inline-block";
+  lightModeBtn.style.display = "none";
+});

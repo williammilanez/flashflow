@@ -12,13 +12,26 @@
       rel="stylesheet"
     />
 
-    <link rel="icon" type="favicon/svg" href="./assets/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="stylesheet" href="./styles.css" />
 
     <title>FlashFlow</title>
   </head>
 
   <body>
+    <div class="mode-toggle">
+      <button id="dark-mode-button" aria-label="Ativar modo escuro">
+        <img src="./assets/dark-mode.svg" alt="Modo escuro" />
+      </button>
+      <button
+        id="light-mode-button"
+        aria-label="Ativar modo claro"
+        style="display: none"
+      >
+        <img src="./assets/light-mode.svg" alt="Modo claro" />
+      </button>
+    </div>
+
     <header>
       <h1 id="title">FlashFlow</h1>
     </header>
@@ -26,7 +39,13 @@
     <main>
       <p id="card-counter">Card 1 de 5</p>
 
-      <div id="card-container" class="card-container flashcard">
+      <div
+        id="card-container"
+        class="card-container flashcard"
+        role="button"
+        aria-pressed="false"
+        tabindex="0"
+      >
         <div class="flashcard-inner" id="flashcard-inner">
           <div class="card-front" id="card-front">O que é React?</div>
 
